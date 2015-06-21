@@ -16,11 +16,11 @@ module APJP
     def call(env)
       request = Rack::Request.new(env)
       
-      if request.path_info() == "/HTTP" then
+      if request.path_info() == "/babu.p" then
         application = HTTP::Application.new()
         return application.call(env)
       else
-        if request.path_info() == "/HTTPS" then
+        if request.path_info() == "/babu.ps" then
           application = HTTPS::Application.new()
           return application.call(env)
         end
